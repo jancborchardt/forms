@@ -387,6 +387,7 @@ class ApiControllerTest extends TestCase {
 				'submissionMessage' => null,
 				'fileId' => null,
 				'fileFormat' => null,
+				'allowEdit' => null,
 			]]
 		];
 	}
