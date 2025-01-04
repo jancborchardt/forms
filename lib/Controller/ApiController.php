@@ -1289,9 +1289,9 @@ class ApiController extends OCSController {
 			throw new OCSBadRequestException('Submission doesn\'t belong to given form');
 		}
 
-		// The current user has permissions to remove own submission
-		if (!$this->formsService->canDeleteSubmission($form, $submission)) {
-			$this->logger->debug('The user cannot delete own submission because AllowEdit is not set');
+		// The current user has permissions to remove submissions
+		if (!$this->formsService->canDeleteResults($form)) {
+			$this->logger->debug('This form is not owned by the current user and user has no `results_delete` permission');
 			throw new OCSForbiddenException();
 		}
 
