@@ -230,6 +230,8 @@ class FormsService {
 				}
 			} catch (DoesNotExistException $e) {
 				//handle silently
+			} catch (MultipleObjectsReturnedException $e) {
+				//handle silently
 			}
 		}
 
